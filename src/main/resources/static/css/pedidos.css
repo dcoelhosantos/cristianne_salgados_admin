@@ -1,0 +1,61 @@
+.hidden {
+    display: none;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4c4e50;
+}
+
+.toggle-button:hover {
+    color: #0c0c0c;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate-down {
+    transform: rotate(180deg);
+}
+
+.pedido {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.filtrar {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.75em;
+}
+
+#hora_retirada{
+    width: 30%;
+}
+
+.div-filtrar{
+    margin-top: 1em;
+    display: flex;
+}
+
+.dh{
+    margin-right: 1em;
+}

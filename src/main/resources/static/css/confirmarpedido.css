@@ -1,0 +1,298 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.header .user-info {
+    color: #666;
+}
+
+.pedido-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.pedido-info div {
+    margin-bottom: 10px;
+}
+
+.pedido-info div span {
+    font-weight: bold;
+    color: #333;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: #f0f0f0;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+    color: #333;
+}
+
+table tfoot td {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .confirmar {
+    background-color: #4caf50;
+}
+
+.buttons .negar {
+    background-color: #f44336;
+}
+
+/*Confirmar-Pedido-PopUp, Negar-Pedido-PopUp, Entregar-Pedido-PopUp e Cancelar-Pedido-PopUp*/
+.confirmar-pedido-background, .negar-pedido-background{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height:100%;
+    width:100%;
+    z-index:100%;
+    display:none;
+  }
+  
+  .confirmar-pedido, .negar-pedido{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24em;
+    transform: translate(-50%, -50%);
+    border:5px solid #fff;
+    object-fit: cover;
+    background-color: #fff;;
+    margin-top: 2em;
+    padding: .5em;
+    border-radius: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+   
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .confirmar-pedido-button{
+    background-color: #83d95a;
+    color: #060D0F;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .confirmar-pedido-button:hover{
+    background-color: #6bb847;
+  }
+  
+  .negar-pedido-button{
+    background-color: #EC5A5A;
+    color: #060D0F;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .negar-pedido-button:hover{
+    background-color: #bb3535;
+  }
+  /*Fim Confirmar-Pedido-Popup, Nega-Pedido-Popup, Entregar-Pedido-PopUp e Cancelar-Pedido-PopUp*/
+    
+  /*Justificativa-PopUp*/
+  .justificativa-background{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height:100%;
+    width:100%;
+    z-index:100%;
+    display:none;
+  }
+  
+  .justificativa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    transform: translate(-50%, -50%);
+    border:5px solid #fff;
+    object-fit: cover;
+    background-color: #fff;;
+    margin-top: 2em;
+    padding: .5em;
+    border-radius: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+   
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .justificativa textarea{
+    width: 80%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+  }
+  
+  #texto-justificativa-popup{
+    outline: none;
+  }
+  
+  .justificativa-cancelar-button{
+    background-color: #83d95a;
+    color: #060D0F;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .justificativa-cancelar-button:hover{
+    background-color: #6bb847;
+  }
+  
+  .justificativa-voltar-button{
+    background-color: #EC5A5A;
+    color: #060D0F;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .justificativa-voltar-button:hover{
+    background-color: #bb3535;
+  }
+  /*Fim Justificativa-Popup*/
+  
+  .fechar{
+    position: absolute;
+    top: 0px; right: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #383838;
+    cursor:pointer;
+    z-index: 100;
+  }
+  
+  .titulo-popup{
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #14433D;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  .subtitulo-popup{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .buttons .voltar {
+    background-color: #2a73d8;
+  }
